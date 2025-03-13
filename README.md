@@ -8,7 +8,7 @@ A Neovim plugin that shows git blame information for the current line, similar t
 
 ```lua
 use {
-  'your-username/gitlens.nvim',
+  'pradhyu/gitlens.nvim',
   requires = { 'nvim-lua/plenary.nvim' }
 }
 ```
@@ -17,7 +17,7 @@ use {
 
 ```lua
 {
-  'your-username/gitlens.nvim',
+  'pradhyu/gitlens.nvim',
   dependencies = { 'nvim-lua/plenary.nvim' },
   config = function()
     require('gitlens').setup()
@@ -32,7 +32,7 @@ use {
 mkdir -p ~/.config/nvim/pack/plugins/start/
 
 # Clone the repository
-git clone https://github.com/your-username/gitlens.nvim ~/.config/nvim/pack/plugins/start/gitlens.nvim
+git clone https://github.com/pradhyu/gitlens.nvim ~/.config/nvim/pack/plugins/start/gitlens.nvim
 
 # Optional: Clone dependency
 git clone https://github.com/nvim-lua/plenary.nvim ~/.config/nvim/pack/plugins/start/plenary.nvim
