@@ -8,7 +8,7 @@ A Neovim plugin that shows git blame information for the current line, similar t
 
 ```lua
 use {
-  'pradhyu/gitlens.nvim',
+  'your-username/gitlens.nvim',
   requires = { 'nvim-lua/plenary.nvim' }
 }
 ```
@@ -17,7 +17,7 @@ use {
 
 ```lua
 {
-  'pradhyu/gitlens.nvim',
+  'your-username/gitlens.nvim',
   dependencies = { 'nvim-lua/plenary.nvim' },
   config = function()
     require('gitlens').setup()
@@ -71,6 +71,14 @@ require('gitlens').setup({
   auto_show_delay = 1000,
   -- Git command timeout (in ms)
   git_cmd_timeout = 5000,
+  -- Whether to show diff information in a floating window
+  show_diff = true,
+  -- Width of the diff floating window (0 for auto-sizing)
+  diff_window_width = 0,
+  -- Height of the diff floating window (0 for auto-sizing)
+  diff_window_height = 0,
+  -- Border style for the diff floating window
+  diff_window_border = "single",
 })
 ```
 
@@ -79,12 +87,14 @@ require('gitlens').setup({
 The plugin provides the following commands:
 
 - `:GitLensShow` - Manually show git blame information for the current line
+- `:GitLensShowDiff` - Show a diff of changes made in the commit that last modified the current line
 - `:lua require('gitlens').toggle_auto_show()` - Toggle automatic display of blame information when the cursor stays on a line
 
 ## Features
 
 - Shows git blame information inline as virtual text
 - Automatically shows blame info when cursor rests on a line (configurable)
+- Shows diff of changes made in the commit that last modified the current line
 - Customizable format for blame information
 - Works with any git repository
 
